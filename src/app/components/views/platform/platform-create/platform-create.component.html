@@ -1,0 +1,14 @@
+<form>
+    <h1> CREATE A NEW PLATFORM </h1>
+
+    <mat-form-field class="form">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="platform.platformName" type="text" name="platformName" placeholder="Ex. Computer">
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="createPlatform()" class="mat-elevation-z8"  mat-stroked-button color="primary">CREATE</button>
+        <button (click)="cancel()" class="mat-elevation-z8"  mat-stroked-button color="war">CANCEL</button>
+    </div>
+    
+</form>

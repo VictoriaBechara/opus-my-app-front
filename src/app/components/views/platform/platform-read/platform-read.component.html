@@ -1,0 +1,49 @@
+<div class="content">
+    <div class="title">
+        <h1>Platforms</h1>
+    </div>
+
+    <button class="mat-elevation-z8" (click)="NavToPlatformCreate()" mat-stroked-button color="primary">NEW PLATFORM</button>
+
+
+    <div class="mat-elevation-z8 content-table">
+        <table class="table" mat-table [dataSource] = "platform">
+            <!-- Position Column -->    
+            <ng-container matColumnDef="platformId">
+              <th mat-header-cell *matHeaderCellDef> ID </th>
+              <td mat-cell *matCellDef="let row"> {{row.platformId}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="platformName">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let row"> {{row.platformName}} </td>
+            </ng-container>
+            
+            <ng-container matColumnDef="game">
+                <th mat-header-cell *matHeaderCellDef> Games </th>
+                <td mat-cell *matCellDef="let row">
+                    <a class="games" href="#">
+                        <i class="material-icons">games</i>
+                    </a>
+                </td>
+              </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="actions">
+              <th class="mat-header" mat-header-cell *matHeaderCellDef> Actions </th>
+              <td mat-cell *matCellDef="let row">
+                <a class="edit" href="#">
+                    <i class="material-icons">edit</i>
+                </a>
+                <a class="delete" routerLink="deletePlatform/{{row.platformId}}">
+                    <i class="material-icons">delete</i>
+                </a>
+              </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </div>
+</div>

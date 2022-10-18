@@ -1,0 +1,14 @@
+<form>
+    <h1> DELETE PLATFORM </h1>
+
+    <mat-form-field class="form">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="platform.platformName" type="text" name="platformName" disabled>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="deletePlatform()" class="mat-elevation-z8"  mat-stroked-button color="primary">DELETE</button>
+        <button (click)="cancel()" class="mat-elevation-z8"  mat-stroked-button color="war">CANCEL</button>
+    </div>
+    
+</form>

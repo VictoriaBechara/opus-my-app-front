@@ -1,0 +1,24 @@
+<form>
+    <h1> CREATE A NEW GAME </h1>
+
+    <mat-form-field class="form">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="game.gameName" type="text" name="gameName" placeholder="Ex. Minecraft">
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Description</mat-label>
+        <textarea matInput [(ngModel)]="game.gameDescription" type="text" name="gameDescription" placeholder="About the game"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Note</mat-label>
+        <input matInput [(ngModel)]="game.gameNote" type="text" name="gameNote" placeholder="Ex. 9.5">
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="createGame()" class="mat-elevation-z8"  mat-stroked-button color="primary">CREATE</button>
+        <button (click)="cancel()" class="mat-elevation-z8"  mat-stroked-button color="war">CANCEL</button>
+    </div>
+    
+</form>

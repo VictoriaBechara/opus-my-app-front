@@ -14,9 +14,12 @@
     font-weight: 500;
 }
 
+button {
+    margin-bottom: .8rem;
+}
+
 .table {
     width: 100%;
-    margin-top: 15px;
 }
 
 .edit {
@@ -30,4 +33,9 @@
 
 .mat-header {
     width: 5rem;
+}
+
+.games {
+    margin-left: 8px;
+    color: rgb(84, 80, 80);
 }

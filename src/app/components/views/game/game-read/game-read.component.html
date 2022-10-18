@@ -3,8 +3,10 @@
         <h1>Games</h1>
     </div>
 
+    <button class="mat-elevation-z8" (click)="NavToGameCreate()" mat-stroked-button color="primary">NEW GAME</button>
+
     <div class="mat-elevation-z8 content-table">
-        <table class="table" mat-table>
+        <table class="table" mat-table [dataSource] = "game">
             <!-- Position Column -->    
             <ng-container matColumnDef="gameId">
               <th mat-header-cell *matHeaderCellDef> ID </th>
@@ -30,9 +32,26 @@
             </ng-container>
 
             <!-- Symbol Column -->
+            <ng-container matColumnDef="platform">
+                <th mat-header-cell *matHeaderCellDef> platform </th>
+                <td mat-cell *matCellDef="let row"> 
+                    <a class="platforms" href="#">
+                      <i class="material-icons">devices</i>
+                    </a>
+                </td>
+              </ng-container>
+
+            <!-- Symbol Column -->
             <ng-container matColumnDef="actions">
-              <th mat-header-cell *matHeaderCellDef> Actions </th>
-              <td mat-cell *matCellDef="let row"> {{row.actions}} </td>
+              <th class="mat-header" mat-header-cell *matHeaderCellDef> Actions </th>
+              <td mat-cell *matCellDef="let row">
+                <a class="edit" href="#">
+                    <i class="material-icons">edit</i>
+                </a>
+                <a class="delete" routerLink="deleteGame/{{row.gameId}}">
+                    <i class="material-icons">delete</i>
+                </a>
+              </td>
             </ng-container>
           
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

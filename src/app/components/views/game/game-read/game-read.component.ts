@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Game } from '../game.model';
 import { GameService } from '../game.service';
-
 
 @Component({
   selector: 'app-game-read',
@@ -12,9 +12,9 @@ export class GameReadComponent implements OnInit {
 
   game: Game[] = [];
 
-  displayedColumns: string[] = ['gameId', 'gameName', 'gameDescription', 'gameNote', 'actions'];
+  displayedColumns: string[] = ['gameId', 'gameName', 'gameDescription', 'gameNote', 'platform', 'actions'];
 
-  constructor(private service: GameService) { }
+  constructor(private service: GameService, private router: Router) { }
 
   ngOnInit(): void {
     this.findAll();
@@ -27,5 +27,8 @@ export class GameReadComponent implements OnInit {
     })
   }
 
+  NavToGameCreate(){
+    this.router.navigate(["game/createGame"])
+  }
 
 }
