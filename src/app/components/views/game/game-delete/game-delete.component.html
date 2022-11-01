@@ -1,24 +1,57 @@
 <form>
-    <h1> DELETE GAME </h1>
+  <div class="eight">
+    <h1>DELETE GAME</h1>
+  </div>
 
-    <mat-form-field class="form">
-        <mat-label>Name</mat-label>
-        <input matInput type="text" name="gameName" disabled>
-    </mat-form-field>
+  <mat-form-field class="form">
+    <mat-label>Name</mat-label>
+    <input
+      matInput
+      [(ngModel)]="game.gameName"
+      type="text"
+      name="gameName"
+      disabled
+    />
+  </mat-form-field>
 
-    <mat-form-field class="form">
-        <mat-label>Description</mat-label>
-        <input matInput type="text" name="gameDescription" disabled>
-    </mat-form-field>
+  <mat-form-field class="form">
+    <mat-label>Description</mat-label>
+    <textarea
+      matInput
+      [(ngModel)]="game.gameDescription"
+      type="text"
+      name="gameDescription"
+      disabled
+    ></textarea>
+  </mat-form-field>
 
-    <mat-form-field class="form">
-        <mat-label>Note</mat-label>
-        <input matInput type="text" name="gameNote" disabled>
-    </mat-form-field>
+  <mat-form-field class="form">
+    <mat-label>Note</mat-label>
+    <input
+      matInput
+      [(ngModel)]="game.gameNote"
+      type="text"
+      name="gameNote"
+      disabled
+    />
+  </mat-form-field>
 
-    <div class="buttons">
-        <button class="mat-elevation-z8"  mat-stroked-button color="primary">DELETE</button>
-        <button class="mat-elevation-z8"  mat-stroked-button color="war">CANCEL</button>
-    </div>
-    
+  <div class="buttons">
+    <button
+      (click)="deleteGame()"
+      class="mat-elevation-z8"
+      mat-stroked-button
+      color="primary"
+    >
+      DELETE
+    </button>
+    <button
+      (click)="cancel()"
+      class="mat-elevation-z8"
+      mat-stroked-button
+      color="war"
+    >
+      CANCEL
+    </button>
+  </div>
 </form>

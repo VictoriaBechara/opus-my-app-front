@@ -1,4 +1,4 @@
-export interface Platform{
-    platformId?: String;
-    platformName: String; 
+export interface Platform {
+  platformId?: String;
+  platformName: String;
 }

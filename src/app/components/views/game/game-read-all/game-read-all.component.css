@@ -1,28 +1,41 @@
-form {
-  text-align: center;
-  width: 70%;
-  margin: 2rem auto 0 auto;
+.content {
+  width: 97%;
+  margin: 1.4rem auto auto auto;
 }
 
-h1 {
-  font-size: 2rem;
-  font-weight: 500;
-  margin-bottom: 3rem;
-}
-
-.form {
+.table {
   width: 100%;
+  margin-top: 15px;
 }
 
-.buttons {
-  width: 100%;
-  text-align: start;
+.edit {
+  color: slateblue;
+}
+
+.delete {
+  color: red;
+  margin-right: 2rem;
+}
+
+.mat-header {
+  width: 5rem;
 }
 
 button {
+  margin: 5px;
+}
+.cancel {
   margin-right: 0.5rem;
   padding-right: 2rem;
   padding-left: 2rem;
+  margin-top: 20px;
+  text-align: center;
+}
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+
 }
 
 .eight h1 {

@@ -1,33 +1,70 @@
-.content{
-    width: 97%;
-    margin: 1.4rem auto auto auto;
+.content {
+  width: 97%;
+  margin: 1.4rem auto auto auto;
 }
 
 .title {
-    text-align: center;
-    margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .title h1 {
-    font-size: 2rem;
-    color: rgb(84, 80, 80);
-    font-weight: 500;
+  font-size: 2rem;
+  color: rgb(84, 80, 80);
+  font-weight: 500;
+}
+
+button {
+  margin-bottom: 0.8rem;
 }
 
 .table {
-    width: 100%;
-    margin-top: 15px;
+  width: 100%;
 }
 
 .edit {
-    color:slateblue
+  color: slateblue;
 }
 
 .delete {
-    color: red;
-    margin-right: 2rem;
+  color: red;
+  margin-right: 2rem;
 }
 
 .mat-header {
-    width: 5rem;
+  width: 5rem;
+}
+
+.games {
+  margin-left: 8px;
+  color: rgb(84, 80, 80);
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+
+}
+
+.eight h1 {
+  text-align: center;
+
+  text-transform: uppercase;
+  font-size: 26px;
+  letter-spacing: 1px;
+  font-weight: 550;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 16px 0;
+  grid-gap: 22px;
+}
+
+.eight h1:after,
+.eight h1:before {
+  content: " ";
+  display: block;
+  border-bottom: 2px solid #ccc;
+  background-color: #f8f8f8;
 }

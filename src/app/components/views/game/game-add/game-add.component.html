@@ -1,0 +1,36 @@
+<form>
+  <div class="eight">
+    <h1>ADD A NEW GAME</h1>
+  </div>
+
+  <mat-form-field appearance="fill" class="form">
+    <mat-label>Select an option</mat-label>
+    <mat-select
+      (selectionChange)="onSelectChange($event)"
+      type="String"
+      disableRipple
+    >
+      <mat-option *ngFor="let game of games" [value]="game">{{
+        game.gameName
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div class="buttons">
+    <button
+      class="mat-elevation-z8"
+      (click)="onAddGame()"
+      mat-stroked-button
+      color="primary"
+    >
+      SAVE
+    </button>
+    <button
+      class="mat-elevation-z8"
+      (click)="cancel()"
+      mat-stroked-button
+      color="primary"
+    >
+      CANCEL
+    </button>
+  </div>
+</form>

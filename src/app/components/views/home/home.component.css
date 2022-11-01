@@ -1,16 +1,29 @@
-.home{
-    width: 93%;
-    margin: 1rem auto;
+.home {
+  width: 93%;
+  margin: 1rem auto;
 }
 
-@media(max-width: 450px){
-    .home{
-        width: 70%;
-    }
+@media (max-width: 450px) {
+  .home {
+    width: 70%;
+  }
 }
 
-@media(max-width: 760px){
-    .home{
-        width: 80%;
-    }
+@media (max-width: 760px) {
+  .home {
+    width: 80%;
+  }
 }
+
+.ten h1 {
+    font-size:34px; font-weight:500; text-transform:uppercase;
+  }
+  .ten h1:before {
+      background-color: purple;
+      border-radius: 0.25rem;
+      content: '';
+      display: block;
+      height: 0.25rem;
+      width: 42px;
+      margin-bottom: 1.25rem;
+  }

@@ -1,7 +1,19 @@
 <form>
   <div class="eight">
-    <h1>CREATE A NEW GAME</h1>
+    <h1>UPDATE GAME</h1>
   </div>
+  
+
+  <mat-form-field class="form">
+    <mat-label>Id</mat-label>
+    <input
+      matInput
+      [(ngModel)]="game.gameId"
+      type="text"
+      name="gameId"
+      disabled
+    />
+  </mat-form-field>
 
   <mat-form-field class="form">
     <mat-label>Name</mat-label>
@@ -12,7 +24,6 @@
       required
       type="text"
       name="gameName"
-      placeholder="Ex. Minecraft"
     />
     <mat-error *ngIf="gameName.invalid"> {{ getMessage() }} </mat-error>
   </mat-form-field>
@@ -26,7 +37,6 @@
       required
       type="text"
       name="gameDescription"
-      placeholder="About the game"
     ></textarea>
     <mat-error *ngIf="gameDescription.invalid"> {{ getMessage() }} </mat-error>
   </mat-form-field>
@@ -40,7 +50,6 @@
       required
       type="text"
       name="gameNote"
-      placeholder="Ex. 9.5"
     />
     <mat-error *ngIf="gameNote.invalid"> {{ getMessage() }} </mat-error>
   </mat-form-field>
@@ -48,12 +57,12 @@
   <div class="buttons">
     <button
       [disabled]="getMessage()"
-      (click)="createGame()"
+      (click)="updateGame()"
       class="mat-elevation-z8"
       mat-stroked-button
       color="primary"
     >
-      CREATE
+      UPDATE
     </button>
     <button
       (click)="cancel()"

@@ -1,0 +1,17 @@
+<form>
+  <mat-card class="home mat-elevation-z4">
+    <mat-card-title class="title">{{ game.gameName }}</mat-card-title>
+  </mat-card>
+  <mat-card class="home mat-elevation-z4">
+    <mat-card-subtitle class="subtitle">{{
+      game.gameDescription
+    }}</mat-card-subtitle>
+  </mat-card>
+  <button (click)="cancel()" mat-stronk-button color="warn">
+    <mat-icon>keyboard_return</mat-icon>
+  </button>
+
+  <mat-card class="home mat-elevation-z4">
+    <mat-card-subtitle class="subtitle">{{ game.gameNote }}</mat-card-subtitle>
+  </mat-card>
+</form>

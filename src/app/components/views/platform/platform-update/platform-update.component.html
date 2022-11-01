@@ -1,27 +1,43 @@
 <form>
   <div class="eight">
-    <h1>DELETE PLATFORM</h1>
+    <h1>UPDATE PLATFORM</h1>
   </div>
+  
+
+  <mat-form-field class="form">
+    <mat-label>Id</mat-label>
+    <input
+      matInput
+      [(ngModel)]="platform.platformId"
+      type="text"
+      name="platformId"
+      disabled
+    />
+  </mat-form-field>
 
   <mat-form-field class="form">
     <mat-label>Name</mat-label>
     <input
       matInput
       [(ngModel)]="platform.platformName"
+      [formControl]="platformName"
+      required
       type="text"
       name="platformName"
-      disabled
+      placeholder="Ex. Computer"
     />
+    <mat-error *ngIf="platformName.invalid"> {{ getMessage() }} </mat-error>
   </mat-form-field>
 
   <div class="buttons">
     <button
-      (click)="deletePlatform()"
+      [disabled]="getMessage()"
+      (click)="updatePlatform()"
       class="mat-elevation-z8"
       mat-stroked-button
       color="primary"
     >
-      DELETE
+      UPDATE
     </button>
     <button
       (click)="cancel()"

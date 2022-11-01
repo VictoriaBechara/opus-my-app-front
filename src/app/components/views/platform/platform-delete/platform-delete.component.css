@@ -1,26 +1,48 @@
 form {
-    text-align: center;
-    width: 70%;
-    margin: 2rem auto 0 auto;
+  text-align: center;
+  width: 70%;
+  margin: 2rem auto 0 auto;
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 3rem;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
 }
 
 .form {
-    width: 100%;
+  width: 100%;
 }
 
 .buttons {
-    width: 100%;
-    text-align: start;
+  width: 100%;
+  text-align: start;
 }
 
 button {
-    margin-right: .5rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
+  margin-right: 0.5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.eight h1 {
+  text-align: center;
+
+  text-transform: uppercase;
+  font-size: 26px;
+  letter-spacing: 1px;
+  font-weight: 550;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 16px 0;
+  grid-gap: 22px;
+}
+
+.eight h1:after,
+.eight h1:before {
+  content: " ";
+  display: block;
+  border-bottom: 2px solid #ccc;
+  background-color: #f8f8f8;
 }
